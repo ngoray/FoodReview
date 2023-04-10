@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <link rel="shortcut icon" href="Images/icon.jpg" type="image/x-icon"
+    />
+    <title>Contact Us</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/testing.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstraps.css">
+    <link rel="stylesheet" href="./css/mystyle.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body background="">
+
+        <nav class="navbar navbar-expand-sm navbar-dark bgyellow">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="Images/icon.jpg" width="70" height="70" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+            
+                <div class="collapse navbar-collapse" id="navbarsExample03">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./Aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact.html">Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="dropdown03">Others</a>
+                            <div class="dropdown-content" aria-labelledby="dropdown03">
+                                <ul>
+                                    <li id="myAcc" class="notLogin">
+                                        <a class="dropdown-item" href="#" onclick="editUser(this)">My Account</a>
+                                    </li>
+                                    <li >
+                                        <a class="dropdown-item" href="#" id="signin" onclick="showSignin()">Login</a>
+                                    </li>
+                                    <li id="signUp" class=" ">
+                                        <a class="dropdown-item" href="#" id="signup" onclick="showSignup()">Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-md-0">
+                        <input class="form-control" type="text" id="search" name="search" onclick="showFood()" placeholder="Search">
+                    </form>
+                </div>
+            </nav>
+    <div w3-include-html="html/modal.html"></div>
+
+    <br>
+    <br>
+    <br>
+
+    <center>
+
+        <h1>
+            <font color="white">
+                <b>Your words are powerful!</b>
+            </font>
+        </h1>
+        <br>
+
+        <h2>
+            <font color="white">
+                <b>We need your help to give us tip on how to improve our webpage!</b>
+            </font>
+        </h2>
+
+        <h2>
+            <font color="white">
+                <b>Oh and feel free to say hello!</b>
+            </font>
+        </h2>
+
+        <br>
+
+        <table border="0">
+            <tr>
+                <td width="500" align="middle">
+                    <!-- <form action="./thankyou.html"> -->
+                        <form>
+                        <div>
+                        <input type="text" class="form-control" id="fname" placeholder="Name.." required="true" size="42">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Email.." required="true" size="42">
+                        </div>
+                        <textarea class="form-control" rows="10" cols="45" id="userComments" placeholder="Comments.."></textarea>
+                        <br>
+                        <div>
+                            <button type="Submit" onclick="addFeed()" class="btn button">Post Feedback</button>
+                        </div>
+                    </form>
+                </td>
+
+                <td width="700" align="middle">
+                    <h3>
+
+                        <font color="white">Our Location</font>
+
+                    </h3>
+                    <h1 class="form-control" id="map" style="width:400px;height:300px;background:yellow"></h1>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div w3-include-html="html/blog/blogmodal.html"></div>
+        <div w3-include-html="html/footer.html"></div>
+
+        <div w3-include-html="html/details.html"></div>
+        <script>
+            function myMap() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(1.345661233433565, 103.93284738063812),
+                    zoom: 100,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWaBx5eiV1kDOnUdsrttUrxROcYC06DPk&callback=myMap"></script>
+
+        <!--a dependcy library required by bootstrap js -->
+        <script src="js/popper.js"></script>
+        <!--using bootstrap js for effects like modals -->
+        <script src="js/bootstrap-native-v4.js"></script>
+        <!--a simple library so that html tags can be separated into other files - neater and cleaner -->
+        <script src="js/w3.js"></script>
+        <!--where pur javascript resides -->
+        <script>w3.includeHTML();</script>
+        <script src="js/app.js"></script>
+        <script src="js/comments.js"></script>
+        <script src="js/signup.js"></script>
+        <script src="js/search.js"></script>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+.button5 {
+    position:absolute;
+    transition: .5s ease;
+    top: 92%;
+    left: 95%;
+    border-radius: 50%;
+}
+
+.button2 {
+    background-color: rgb(228, 192, 32);
+    color: white;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    float: right;
+  }
+
+.resize{
+    vertical-align: middle;
+    margin-top: 1.5rem;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+  }
+
+  article,
+  aside,
+  figure,
+  hgroup,
+  menu,
+  section {
+    display: block;
+  }
+
+  img{
+    max-width:240px;
+  }
+
+  input[type=file]{
+  padding:10px;
+  color:#2d2d2d;}
+
+  input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    /* background: #f2f2f2; */
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.mystyle {
+    height: 90px;
+    width: 254px;
+    color: white;
+    font-size: smaller;
+}
+
+.edit{
+    float: right;
+    padding-right: 10px;
+}
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 500px;
+    padding-bottom: 10px;
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    height: 200px;
+    width: 254px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}

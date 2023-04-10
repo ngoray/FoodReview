@@ -1,0 +1,129 @@
+<!-- <comment modal> -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="review">Q&A</h5>
+                <button onclick="showNew()" type="button" class="btn button" id="newComment">New Comment</button>
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="emptyComment"></div>
+                <div id="commentBody" class="row px-5"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <comment modal> -->
+
+<!-- <newcomment modal> -->
+<div id="newModal" class="modal">
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="modal-header">
+            <h5 class="modal-title" id="review">Question</h5>
+        </div>
+        <span class="close" title="Close Modal" data-dismiss="Modal">×</span>
+        <div>
+            <center>
+                <textarea class="form-control" id="userComments" placeholder="What's on your mind?"></textarea>
+            </center>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn button2" data-dismiss="modal" id="submitComment" onClick="addFeed()">Feedback</button>
+        </div>
+</div>
+</form>
+</div>
+<!-- <newcomment modal> -->
+
+<!-- <email modal> -->
+<div class="modal fade" id="emailModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Email</h4>
+            </div>
+            <div class="modal-body">
+                <p class="black">For any doubts and enquiries you can contact us through:</p>
+                Email: 1704754I@student.tp.edu.sg
+                <br> Hp: 87178111
+                <br> Location: 21 Tampines Avenue 1, 529757
+                <br>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- <email modal> -->
+
+<!-- <info modal> -->
+<div class="modal fade" id="infoModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Guide</h4>
+            </div>
+            <div class="modal-body">
+                <center>
+                    <p>info</p>
+                    <iframe width="600" height="300" src="https://www.youtube.com/embed/wsRsyIZ1djs">
+                    </iframe>
+                    <br>
+                    <iframe width="600" height="300" src="https://www.youtube.com/embed/bFwmyiyFCpY">
+                    </iframe>
+                </center>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- <info modal> -->
+
+<div class="modal fade " id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg " role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="black">Thank you for your time</h3>
+                <button type="button" class="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- <EDIT> -->
+        <div id="editModal" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="review">Question</h5>
+                    </div>
+                    <span class="close" title="Close Modal" data-dismiss="Modal">×</span>
+                    <div>
+                        <center>
+                            <textarea class="form-control" id="edituserComments" placeholder="What's on your mind?"></textarea>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn button2" data-dismiss="modal" id="editsubmitComment" onClick="updateComment()">Feedback</button>
+                    </div>
+            </div>
+            </form>
+            </div>
+<!-- </EDIT> -->

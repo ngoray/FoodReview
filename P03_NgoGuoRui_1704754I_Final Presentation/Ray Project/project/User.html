@@ -1,0 +1,66 @@
+<html>
+
+<head>
+        <link rel="shortcut icon" href="Images/icon.jpg" type="image/x-icon"
+        />
+
+    <title>Profile</title>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/testing.css">
+    <link rel="stylesheet" href="./css/user.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstraps.css">
+</head>
+
+<body onload="getUserData()">
+
+
+    <div class="sidenav">
+        <h2 style="padding-left:15px;">My Profile :</h2>
+        <br>
+        <a href="#" onclick="">My Account</a>
+        <br>
+        <a href="#" onclick="logout()">Logout</a>
+
+        <a style="position:absolute; bottom:0;" href="home.html">
+            <img src="Images/back.png" width="50" height="50" /> Back</a>
+    </div>
+
+    <div class="main">
+        <br><br><br><br><br>
+        
+            <div id="Pro">
+                    <form>
+                        <div class="pro">
+                            <div class="page" id="profile">
+                                <form class="account-form">
+                                    <h2 class="">Account details</h2>
+
+                                    <div id="profile"></div>
+
+                                    <br>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    </div>
+    <center>
+            <br><br><br><br><br><br><br>
+            <div w3-include-html="html/footer.html"></div>
+            <div w3-include-html="html/usermodal.html"></div>
+    </center>
+    <!--a dependcy library required by bootstrap js -->
+    <script src="js/popper.js"></script>
+    <!--using bootstrap js for effects like modals -->
+    <script src="js/bootstrap-native-v4.js"></script>
+    <!--a simple library so that html tags can be separated into other files - neater and cleaner -->
+    <script src="js/w3.js"></script>
+    <!--where pur javascript resides -->
+    <script>w3.includeHTML();</script>
+    <script src="js/user.js"></script>
+    
+</body>
+
+</html>
